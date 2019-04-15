@@ -43,5 +43,25 @@ namespace CardioAnalisiLibrary
 
             return calorie;
         }
+
+        public static int Frequenza_Max(int eta)
+        {
+            int frequenzaMassima = 0;
+            int frequenzaConsigliata = 220 - eta;
+
+            frequenzaMassima = Convert.ToInt32(frequenzaConsigliata * 0.9);
+
+            return frequenzaMassima;
+        }
+
+        public static int Frequenza_Min(int eta)
+        {
+            int frequenzaMinima = 0;
+            int frequenzaConsigliata = 220 - eta;
+
+            frequenzaMinima = Convert.ToInt32(frequenzaConsigliata * 0.7);
+
+            return frequenzaMinima;
+        }
     }
 }
