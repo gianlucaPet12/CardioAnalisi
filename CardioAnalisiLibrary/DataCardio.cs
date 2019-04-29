@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CardioAnalisiLibrary
 {
+
+    //punto 2
     public class DataCardio
     {
         public static string TipoBattio(int battiti, string tipo)
@@ -28,6 +30,7 @@ namespace CardioAnalisiLibrary
 
             return rispo;
         }
+        //punto 3
         public static double CalcoloCalorie(double anni, double peso, double frequenza, double tempo, string sesso)
         {
             double calorie = 0;
@@ -43,7 +46,7 @@ namespace CardioAnalisiLibrary
 
             return calorie;
         }
-
+        //punto 1
         public static int Frequenza_Max(int eta)
         {
             int frequenzaMassima = 0;
@@ -62,6 +65,22 @@ namespace CardioAnalisiLibrary
             frequenzaMinima = Convert.ToInt32(frequenzaConsigliata * 0.7);
 
             return frequenzaMinima;
+        }
+
+        public static double Calorie_Corsa_Camminata(string tipo, int km, int peso)
+        {
+            double KCal = 0;
+
+            if (tipo == "Corsa")
+            {
+                KCal = 0.9 * km * peso;
+            }
+            else if (tipo == "Camminata")
+            {
+                KCal = 0.50 * km * peso;
+            }
+
+            return KCal;
         }
     }
 }

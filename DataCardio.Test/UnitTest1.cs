@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataCardio.Test
 {
+    //punto 2
     [TestClass]
     public class UnitTest1
     {
@@ -41,6 +42,16 @@ namespace DataCardio.Test
 
             Assert.AreEqual(valore_max_ottenuto, valore_max_atteso);
             Assert.AreEqual(valore_min_ottenuto, valore_min_atteso);
+        }
+        //punto 4
+        [DataTestMethod]
+        [DataRow("Corsa", 10, 75, 675)]
+        [DataRow("Camminata", 5, 65, 162)]
+        public void Test_corsa_camminata(string tipo, int km, int peso, int valore_atteso)
+        {
+            int valore_ottenuto = Convert.ToInt32(CardioAnalisiLibrary.DataCardio.Calorie_Corsa_Camminata(tipo, km, peso));
+
+            Assert.AreEqual(valore_atteso, valore_ottenuto); 
         }
     }
 }
