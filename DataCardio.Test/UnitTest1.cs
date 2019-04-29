@@ -13,8 +13,8 @@ namespace DataCardio.Test
         [DataRow(90, 117, 91)]
         public void Test_Frequenza_Massima_Cons(int eta, int valore_max_atteso, int valore_min_atteso)
         {
-            int valore_max_ottenuto = CardioAnalisiLibrary.DataCardio.Frequenza_Max(eta);
-            int valore_min_ottenuto = CardioAnalisiLibrary.DataCardio.Frequenza_Min(eta);
+            int valore_max_ottenuto = CardioAnalisiLibrary.DataCardio.Frequenza_Massima(eta);
+            int valore_min_ottenuto = CardioAnalisiLibrary.DataCardio.Frequenza_Minima(eta);
 
             Assert.AreEqual(valore_max_ottenuto, valore_max_atteso);
             Assert.AreEqual(valore_min_ottenuto, valore_min_atteso);

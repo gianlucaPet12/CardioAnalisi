@@ -9,7 +9,7 @@ namespace CardioAnalisiLibrary
     public class DataCardio
     {
         //punto 1
-        public static int Frequenza_Max(int eta)
+        public static int Frequenza_Massima(int eta)
         {
             int frequenzaMassima = 0;
             int frequenzaConsigliata = 220 - eta;
@@ -19,7 +19,7 @@ namespace CardioAnalisiLibrary
             return frequenzaMassima;
         }
 
-        public static int Frequenza_Min(int eta)
+        public static int Frequenza_Minima(int eta)
         {
             int frequenzaMinima = 0;
             int frequenzaConsigliata = 220 - eta;
