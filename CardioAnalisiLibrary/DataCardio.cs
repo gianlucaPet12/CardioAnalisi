@@ -5,11 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CardioAnalisiLibrary
-{
-
-    //punto 2
+{ 
     public class DataCardio
     {
+        //punto 1
+        public static int Frequenza_Max(int eta)
+        {
+            int frequenzaMassima = 0;
+            int frequenzaConsigliata = 220 - eta;
+
+            frequenzaMassima = Convert.ToInt32(frequenzaConsigliata * 0.9);
+
+            return frequenzaMassima;
+        }
+
+        public static int Frequenza_Min(int eta)
+        {
+            int frequenzaMinima = 0;
+            int frequenzaConsigliata = 220 - eta;
+
+            frequenzaMinima = Convert.ToInt32(frequenzaConsigliata * 0.7);
+
+            return frequenzaMinima;
+        }
+        //punto 2
         public static string TipoBattio(int battiti, string tipo)
         {
             string rispo = "";
@@ -46,27 +65,8 @@ namespace CardioAnalisiLibrary
 
             return calorie;
         }
-        //punto 1
-        public static int Frequenza_Max(int eta)
-        {
-            int frequenzaMassima = 0;
-            int frequenzaConsigliata = 220 - eta;
 
-            frequenzaMassima = Convert.ToInt32(frequenzaConsigliata * 0.9);
-
-            return frequenzaMassima;
-        }
-
-        public static int Frequenza_Min(int eta)
-        {
-            int frequenzaMinima = 0;
-            int frequenzaConsigliata = 220 - eta;
-
-            frequenzaMinima = Convert.ToInt32(frequenzaConsigliata * 0.7);
-
-            return frequenzaMinima;
-        }
-
+        //punto 4
         public static double Calorie_Corsa_Camminata(string tipo, int km, int peso)
         {
             double KCal = 0;
@@ -82,5 +82,6 @@ namespace CardioAnalisiLibrary
 
             return KCal;
         }
+
     }
 }
